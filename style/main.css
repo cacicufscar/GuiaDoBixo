@@ -4,6 +4,7 @@
 /*geral*/
 body{
     margin: 0;
+    padding: 0;
     background-color: #212226;
     font-family: 'Lato', sans-serif;
     color: #FFE7DA;
@@ -14,15 +15,15 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:flex-start;
-    text-align: start;
+    align-items: center;
+    text-align: center;
 }
 
 /*índice*/
 
 nav{
     background-color: #4B1C55;
-    position: absolute;
+    position:fixed;
     top: 0;
     left: 0;
     width: 25%;
@@ -30,6 +31,7 @@ nav{
     padding: 1em;
     overflow-y: scroll;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 nav div{
@@ -53,7 +55,8 @@ nav div{
 }
 
 div.nav_title p{
-    margin: -1.5em;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em;
 }
 
 .nav_subtitle{
@@ -63,7 +66,8 @@ div.nav_title p{
 }
 
 div.nav_subtitle p{
-    margin: -1.3em;
+    margin-top: -1.3em;
+    margin-bottom: -1.3em;
 }
 
 .nav_anchors{
@@ -76,6 +80,11 @@ div.nav_subtitle p{
 .nav_anchors p{
     margin-top: .25em;
     margin-bottom: .25em;
+}
+
+.nav_anchors p a{
+    text-decoration: none;
+    color: #FFE7DA;
 }
 
 .nav_anchors p a:hover{
@@ -107,4 +116,60 @@ nav::-webkit-scrollbar-thumb {
     background-color: #FF975C;
     border-radius: 10px;
     border: 3px solid #4B1C55;
+}
+
+/*main*/
+
+main{
+    background-color: #212226;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 75%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding-top: 1em;
+}
+
+main.flex_column{
+    justify-content: flex-start;
+}
+
+main section{
+    max-width: 700px;
+    margin-bottom: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+main section h1{
+    font-size: 4em;
+    color: #F0769A;
+    margin: 0;
+    text-align: left;
+}
+
+main section p{
+    text-align: justify;
+}
+
+main{
+    scrollbar-width: auto;
+    scrollbar-color: #FF975C #212226;
+}
+
+main::-webkit-scrollbar {
+    width: 16px;
+}
+
+main::-webkit-scrollbar-track {
+    background: #212226;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #FF975C;
+    border-radius: 10px;
+    border: 3px solid #212226;
 }
