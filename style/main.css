@@ -86,7 +86,7 @@ nav.flex_column{
         left: 0px;
         height: auto;
         width: 100%;
-        padding: .5em;
+        padding: 2em;
         padding-bottom: 1em;
     }
 }
@@ -135,8 +135,8 @@ nav img{
 span#go_top{
     display: block;
     background-color: #4B1C55;
-    border-radius: 40px;
-    size: 40px;
+    border-radius: 64px;
+    size: 32px;
     right: 16px;
     bottom: 16px;
     display: block;
