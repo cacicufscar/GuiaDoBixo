@@ -8,7 +8,26 @@ body{
     background-color: #212226;
     font-family: 'Lato', sans-serif;
     color: #FFE7DA;
-    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+@media (min-width: 720px) {
+    body{
+        overflow: hidden;
+        
+    }
+}
+
+@media (max-width: 720px) {
+    body{
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: center;
+        font-size: 1.5em;
+    }
 }
 
 .flex_column{
@@ -23,15 +42,53 @@ body{
 
 nav{
     background-color: #4B1C55;
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 100%;
-    padding: 1em;
     overflow-y: scroll;
     overflow-x: hidden;
     box-sizing: border-box;
+    z-index: 6;
+}
+
+nav.flex_column{
+    justify-content: flex-start;
+}
+
+@media (min-width: 720px) {
+    nav{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 25%;
+        scrollbar-width: auto;
+        scrollbar-color: #FF975C #4B1C55;
+        padding: 1em;
+    }
+
+    nav::-webkit-scrollbar {
+        width: 16px;
+    }
+    
+    nav::-webkit-scrollbar-track {
+        background: #4B1C55;
+    }
+    
+    nav::-webkit-scrollbar-thumb {
+        background-color: #FF975C;
+        border-radius: 10px;
+        border: 3px solid #4B1C55;
+    }
+}
+
+@media (max-width: 720px) {
+    nav{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: auto;
+        width: 100%;
+        padding: .5em;
+        padding-bottom: 1em;
+    }
 }
 
 nav div{
@@ -40,41 +97,17 @@ nav div{
     text-align: center;
 }
 
-.nav_sobtitle{
-    font-family: 'Bungee', cursive;
-    font-size: 1.25em;
-    color: #F0769A;
-    margin-bottom: -1em;
-}
-
-.nav_title{
-    font-family: 'Bungee Inline', cursive;
-    font-size: 2.5em;
-    color: #FF975C;
-    margin: .5em;
-}
-
-div.nav_title p{
-    margin-top: -1.5em;
-    margin-bottom: -1.5em;
-}
-
-.nav_subtitle{
-    font-family: 'Bungee', cursive;
-    font-size: 1em;
-    color: #F0769A;
-}
-
-div.nav_subtitle p{
-    margin-top: -1.3em;
-    margin-bottom: -1.3em;
+nav img{
+    position: relative;
+    max-width: 110%;
+    margin: -10% 0 -14% 0;
 }
 
 .nav_anchors{
     width: 80%;
     text-align: left;
     font-weight: 700;
-    padding: 1em;
+    font-size: 1em;
 }
 
 .nav_anchors p{
@@ -99,39 +132,97 @@ div.nav_subtitle p{
     padding-top: 2em;
 }
 
-nav {
-    scrollbar-width: auto;
-    scrollbar-color: #FF975C #4B1C55;
+span#go_top{
+    display: block;
+    background-color: #4B1C55;
+    border-radius: 56px;
+    size: 56px;
+    right: 16px;
+    bottom: 16px;
+    display: block;
+    z-index: 5;
+    box-shadow: rgba(0,0,0,.3) 2px 2px 2px;
 }
 
-nav::-webkit-scrollbar {
-    width: 16px;
+@media (min-width: 720px) {
+    span#go_top{
+        position: hidden;
+        
+    }
 }
 
-nav::-webkit-scrollbar-track {
-    background: #4B1C55;
+@media (max-width: 720px) {
+    span#go_top{
+        position: fixed;
+    }
 }
 
-nav::-webkit-scrollbar-thumb {
-    background-color: #FF975C;
-    border-radius: 10px;
-    border: 3px solid #4B1C55;
-}
+
+
+
 
 /*main*/
 
 main{
     background-color: #212226;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    width: 75%;
-    height: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
     overflow-y: scroll;
     overflow-x: hidden;
-    box-sizing: border-box;
-    padding-top: 1em;
-    scroll-behavior: smooth;
+}
+
+@media (min-width: 720px) {
+    main{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 75%;
+        scrollbar-width: auto;
+        scrollbar-color: #FF975C #212226;
+        padding-top: 1em;
+    }
+
+    main::-webkit-scrollbar {
+        width: 16px;
+    }
+    
+    main::-webkit-scrollbar-track {
+        background: #212226;
+    }
+    
+    main::-webkit-scrollbar-thumb {
+        background-color: #FF975C;
+        border-radius: 10px;
+        border: 3px solid #212226;
+    }
+
+    main section {
+        max-width: 700px;
+    }
+
+    main section h1{
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 720px) {
+    main{
+        position: relative;
+        top: 0px;
+        right: 0px;
+        height: auto;
+        width: 100%;
+        padding-top: .5em;
+    }
+
+    main section {
+        max-width: 100%;
+    }
+
+    main section h1{
+        font-size: 2em;
+    }
 }
 
 main.flex_column{
@@ -139,14 +230,12 @@ main.flex_column{
 }
 
 main section{
-    max-width: 700px;
     margin-bottom: 3em;
     padding-left: 2em;
     padding-right: 2em;
 }
 
 main section h1{
-    font-size: 4em;
     color: #F0769A;
     margin: 0;
     text-align: left;
@@ -154,23 +243,4 @@ main section h1{
 
 main section p{
     text-align: justify;
-}
-
-main{
-    scrollbar-width: auto;
-    scrollbar-color: #FF975C #212226;
-}
-
-main::-webkit-scrollbar {
-    width: 16px;
-}
-
-main::-webkit-scrollbar-track {
-    background: #212226;
-}
-
-main::-webkit-scrollbar-thumb {
-    background-color: #FF975C;
-    border-radius: 10px;
-    border: 3px solid #212226;
 }
