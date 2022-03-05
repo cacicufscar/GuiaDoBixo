@@ -1,11 +1,12 @@
 //declaração globais
 let lastWindowY;
 let goUpButton = document.querySelector('span#go_top');
+let nav = document.querySelector('nav#nav');
 
 //Evento de scroll
 document.addEventListener('scroll',(e)=>{
     //detecta a situação da animação 
-    if(window.scrollY < 1800  || window.scrollY - lastWindowY > 0){
+    if(nav.scrollHeight/window.scrollY > 1  || window.scrollY - lastWindowY > 0){
         slideButtonDown();
     }else{
         slideButtonUp();
