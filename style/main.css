@@ -132,14 +132,13 @@ nav img{
     padding-top: 2em;
 }
 
-span#go_top{
+a span#go_top{
     display: block;
     background-color: #4B1C55;
-    border-radius: 64px;
-    size: 32px;
+    border-radius: 28px;
     right: 16px;
     bottom: 16px;
-    display: block;
+    size: 56px;
     z-index: 5;
     box-shadow: rgba(0,0,0,.3) 2px 2px 2px;
 }
