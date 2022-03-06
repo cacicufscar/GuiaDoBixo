@@ -63,7 +63,7 @@ nav div{
 nav img{
     position: relative;
     max-width: 110%;
-    margin: -10% 0 -14% 0;
+    margin: -10% 0 -10% -5%;
 }
 
 .nav_anchors{
