@@ -60,10 +60,16 @@ nav div{
     text-align: center;
 }
 
+nav a{
+    padding-top: .5em;
+    display: block;
+    width: 100%;
+}
+
 nav img{
+    display: block;
     position: relative;
-    max-width: 110%;
-    margin: -10% 0 -10% -5%;
+    
 }
 
 .nav_anchors{
@@ -121,6 +127,10 @@ nav img{
         border-radius: 10px;
         border: 3px solid #4B1C55;
     }
+
+    nav a img{
+        max-width: 70%;
+    }
 }
 
 /*mobile*/
@@ -135,17 +145,23 @@ nav img{
         padding-bottom: 1em;
         font-size: 1.5em;
     }
+
+    nav a img{
+        max-width: 80%;
+        margin-bottom: -10%;
+        margin-top: -10%;
+    }
 }
 
 a span#go_top{
     display: block;
     background-color: #4B1C55;
-    border-radius: 28px;
+    border-radius: 30px;
     right: 16px;
     bottom: 16px;
-    size: 56px;
+    size: 60px;
     z-index: 5;
-    box-shadow: rgba(0,0,0,.3) 2px 2px 2px;
+    box-shadow: rgba(0,0,0,.3) 3px 1.5px 1.5px;
 }
 
 /*desktop*/
