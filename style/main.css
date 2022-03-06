@@ -11,6 +11,7 @@ body{
     scroll-behavior: smooth;
 }
 
+/*desktop*/
 @media (min-width: 720px) {
     body{
         overflow: hidden;
@@ -18,6 +19,7 @@ body{
     }
 }
 
+/*mobile*/
 @media (max-width: 720px) {
     body{
         overflow: scroll;
@@ -26,7 +28,7 @@ body{
         justify-content: flex-start;
         align-items: flex-start;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1em;
     }
 }
 
@@ -50,45 +52,6 @@ nav{
 
 nav.flex_column{
     justify-content: flex-start;
-}
-
-@media (min-width: 720px) {
-    nav{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-        width: 25%;
-        scrollbar-width: auto;
-        scrollbar-color: #FF975C #4B1C55;
-        padding: 1em;
-    }
-
-    nav::-webkit-scrollbar {
-        width: 16px;
-    }
-    
-    nav::-webkit-scrollbar-track {
-        background: #4B1C55;
-    }
-    
-    nav::-webkit-scrollbar-thumb {
-        background-color: #FF975C;
-        border-radius: 10px;
-        border: 3px solid #4B1C55;
-    }
-}
-
-@media (max-width: 720px) {
-    nav{
-        position: relative;
-        top: 0px;
-        left: 0px;
-        height: auto;
-        width: 100%;
-        padding: 2em;
-        padding-bottom: 1em;
-    }
 }
 
 nav div{
@@ -132,6 +95,48 @@ nav img{
     padding-top: 2em;
 }
 
+/*desktop*/
+@media (min-width: 720px) {
+    nav{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 25%;
+        scrollbar-width: auto;
+        scrollbar-color: #FF975C #4B1C55;
+        padding: 1em;
+    }
+
+    nav::-webkit-scrollbar {
+        width: 16px;
+    }
+    
+    nav::-webkit-scrollbar-track {
+        background: #4B1C55;
+    }
+    
+    nav::-webkit-scrollbar-thumb {
+        background-color: #FF975C;
+        border-radius: 10px;
+        border: 3px solid #4B1C55;
+    }
+}
+
+/*mobile*/
+@media (max-width: 720px) {
+    nav{
+        position: relative;
+        top: 0px;
+        left: 0px;
+        height: auto;
+        width: 100%;
+        padding: 2em;
+        padding-bottom: 1em;
+        font-size: 1.5em;
+    }
+}
+
 a span#go_top{
     display: block;
     background-color: #4B1C55;
@@ -143,6 +148,7 @@ a span#go_top{
     box-shadow: rgba(0,0,0,.3) 2px 2px 2px;
 }
 
+/*desktop*/
 @media (min-width: 720px) {
     span#go_top{
         position: hidden;
@@ -150,6 +156,7 @@ a span#go_top{
     }
 }
 
+/*mobile*/
 @media (max-width: 720px) {
     span#go_top{
         position: fixed;
@@ -170,6 +177,26 @@ main{
     overflow-x: hidden;
 }
 
+main.flex_column{
+    justify-content: flex-start;
+}
+
+main section{
+    margin-bottom: 3em;
+    
+}
+
+main section h1{
+    color: #F0769A;
+    margin: 0;
+    text-align: left;
+}
+
+main section p{
+    text-align: left;
+}
+
+/*desktop*/
 @media (min-width: 720px) {
     main{
         position: absolute;
@@ -198,13 +225,17 @@ main{
 
     main section {
         max-width: 700px;
+        padding-left: 2em;
+        padding-right: 2em;
     }
 
     main section h1{
-        font-size: 4em;
+        font-size: 2.5em;
     }
+
 }
 
+/*mobile*/
 @media (max-width: 720px) {
     main{
         position: relative;
@@ -217,29 +248,11 @@ main{
 
     main section {
         max-width: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
     main section h1{
-        font-size: 2em;
+        font-size: 1.5em;
     }
-}
-
-main.flex_column{
-    justify-content: flex-start;
-}
-
-main section{
-    margin-bottom: 3em;
-    padding-left: 2em;
-    padding-right: 2em;
-}
-
-main section h1{
-    color: #F0769A;
-    margin: 0;
-    text-align: left;
-}
-
-main section p{
-    text-align: justify;
 }

@@ -6,7 +6,7 @@ let nav = document.querySelector('nav#nav');
 //Evento de scroll
 document.addEventListener('scroll',(e)=>{
     //detecta a situação da animação 
-    if(nav.scrollHeight/window.scrollY > 1  || window.scrollY - lastWindowY > 0){
+    if(nav.scrollHeight > window.scrollY  || window.scrollY - lastWindowY > 0){
         slideButtonDown();
     }else{
         slideButtonUp();
