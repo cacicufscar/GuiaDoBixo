@@ -197,37 +197,38 @@ main.flex_column{
     justify-content: flex-start;
 }
 
-main section{
+main div section{
+    width: 100%;
     margin-bottom: 3em;
     
 }
 
-main section h1{
+main div section h1{
     color: #FF975C;
     margin: 0;
     text-align: left;
 }
 
-main section h2{
+main div section h2{
     color: #F0769A;
     text-align: left;
 }
 
-main section h3{
+main div section h3{
     color: #F0769A;
     text-align: left;
 }
 
-main section p{
+main div section p{
     text-align: left;
 }
 
-main section ul{
+main div section ul{
     text-align: left;
     margin: 0;
 }
 
-main section a{
+main div section a{
     color: #FFE7DA;
 }
 
@@ -260,21 +261,21 @@ main section a{
         border: 3px solid #212226;
     }
 
-    main section {
+    main div{
         max-width: 700px;
         padding-left: 2em;
         padding-right: 2em;
     }
 
-    main section h1{
+    main div section h1{
         font-size: 2.5em;
     }
 
-    main section a{
+    main div section a{
         text-decoration: none;
     }
     
-    main section a:hover{
+    main div section a:hover{
         text-decoration: underline;
     }
 
@@ -291,17 +292,21 @@ main section a{
         padding-top: .5em;
     }
 
-    main section {
+    main div{
         max-width: 100%;
         padding-left: 1em;
         padding-right: 1em;
     }
 
-    main section h1{
+    main div section {
+        
+    }
+
+    main div section h1{
         font-size: 1.5em;
     }
 
-    main section a{
+    main div section a{
         text-decoration: underline;
     }
 }
