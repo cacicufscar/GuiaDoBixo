@@ -40,6 +40,15 @@ body{
     text-align: center;
 }
 
+.flex_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap:wrap
+}
+
 /*índice*/
 
 nav{
@@ -232,6 +241,35 @@ main div section a{
     color: #FFE7DA;
 }
 
+#colaboradores{
+    margin: 0;
+    padding: 0;
+}
+
+figure.flex_column{
+    justify-content: flex-start;
+}
+
+main figure img{
+    max-width: 160px;
+    box-sizing: border-box;
+    border-radius: 80px;
+    padding: 10px;
+}
+
+.captionH{
+    font-size: 1em;
+    color: #eeb1c3;
+    font-weight: bold;
+    text-align: center;
+}
+
+.captionText{
+    font-size: 1em;
+    margin: 0;
+    color: #FFE7DA;
+    text-align: center;
+}
 
 
 /*desktop*/
@@ -262,7 +300,7 @@ main div section a{
     }
 
     main div{
-        max-width: 700px;
+        max-width: 720px;
         padding-left: 2em;
         padding-right: 2em;
     }
@@ -277,6 +315,19 @@ main div section a{
     
     main div section a:hover{
         text-decoration: underline;
+    }
+
+    main figure{
+        width: 160px;
+        height: 200px;
+        padding: 0 0 20px 0;
+    }
+    
+    main figure img{
+        max-width: 120px;
+        box-sizing: border-box;
+        border-radius: 50%px;
+        padding: 10px;
     }
 
 }
@@ -298,9 +349,6 @@ main div section a{
         padding-right: 1em;
     }
 
-    main div section {
-        
-    }
 
     main div section h1{
         font-size: 1.5em;
@@ -308,5 +356,18 @@ main div section a{
 
     main div section a{
         text-decoration: underline;
+    }
+
+    main figure{
+        width: 100%;
+        height: auto;
+        margin: 20px;
+    }
+    
+    main figure img{
+        max-width: 80%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        padding: 10px;
     }
 }
