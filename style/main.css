@@ -232,13 +232,18 @@ main div section p{
     text-align: left;
 }
 
+main div section p span{
+    font-weight: bold;
+    color: #F0769A;
+}
+
 main div section ul{
     text-align: left;
     margin: 0;
 }
 
-main div section a{
-    color: #FFE7DA;
+main a{
+    color: inherit;
 }
 
 #colaboradores{
@@ -259,7 +264,7 @@ main figure img{
 
 .captionH{
     font-size: 1em;
-    color: #eeb1c3;
+    color: #F0769A;
     font-weight: bold;
     text-align: center;
 }
@@ -290,7 +295,8 @@ main figure img{
     }
     
     main::-webkit-scrollbar-track {
-        background: #212226;
+        background: transparent;
+        z-index: 4;
     }
     
     main::-webkit-scrollbar-thumb {
@@ -309,11 +315,11 @@ main figure img{
         font-size: 2.5em;
     }
 
-    main div section a{
+    main a{
         text-decoration: none;
     }
     
-    main div section a:hover{
+    main a:hover{
         text-decoration: underline;
     }
 
@@ -326,7 +332,7 @@ main figure img{
     main figure img{
         max-width: 120px;
         box-sizing: border-box;
-        border-radius: 50%px;
+        border-radius: 50%;
         padding: 10px;
     }
 
@@ -354,7 +360,7 @@ main figure img{
         font-size: 1.5em;
     }
 
-    main div section a{
+    main a{
         text-decoration: underline;
     }
 
@@ -371,3 +377,35 @@ main figure img{
         padding: 10px;
     }
 }
+
+footer{
+    margin-top: -50px;
+    color: #FF975C;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    background-color: #212226;
+    box-sizing: border-box;
+    padding: 20px;
+    z-index: 5; 
+}
+
+footer div{
+    width: 210px;
+}
+
+footer img{
+    height: 50px;
+    box-sizing: border-box;
+}
+
+footer a{
+    padding: 0 10px 0 10px;
+}
+
+#caenc{
+    padding: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+
