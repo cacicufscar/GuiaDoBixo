@@ -243,7 +243,7 @@ main div section ul{
 }
 
 main a{
-    color: inherit;
+    color: #F0769A;
 }
 
 #colaboradores{
@@ -376,6 +376,17 @@ main figure img{
         border-radius: 50%;
         padding: 10px;
     }
+}
+
+.image{
+    width: 100%;
+    padding: 0;
+}
+
+#diagram{
+    cursor:pointer;
+    max-width:100%;
+    background-color: gainsboro;
 }
 
 footer{
