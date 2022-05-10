@@ -160,57 +160,51 @@ body{
     }
 }
 
+
+
 /*main*/
-main{
+.conteudo{
     background-color: #212226;
     box-sizing: border-box;
     scroll-behavior: smooth;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-
-main.flex{
     justify-content: flex-start;
 }
 
-main div section{
+.conteudo a{
+    color: #F0769A;
+}
+
+.topico{
     width: 100%;
     margin-bottom: 3em;
     
 }
 
-main div section h1{
+.topico-title{
     color: #FF975C;
     margin: 0;
     text-align: left;
 }
 
-main div section h2{
+.topico-subtitle{
     color: #F0769A;
     text-align: left;
 }
 
-main div section h3{
-    color: #F0769A;
+.topico-text{
     text-align: left;
 }
 
-main div section p{
-    text-align: left;
-}
-
-main div section p span{
+.text-destaque{
     font-weight: bold;
     color: #F0769A;
 }
 
-main div section ul{
+.topico-ul{
     text-align: left;
     margin: 0;
-}
-
-main a{
-    color: #F0769A;
 }
 
 #colaboradores{
@@ -219,25 +213,25 @@ main a{
     flex-wrap: wrap;
 }
 
-figure.flex{
+.colaborador{
     justify-content: flex-start;
 }
 
-main figure img{
+.colaborador img{
     max-width: 160px;
     box-sizing: border-box;
     border-radius: 80px;
     padding: 10px;
 }
 
-.captionH{
+.colaborador-title{
     font-size: 1em;
     color: #F0769A;
     font-weight: bold;
     text-align: center;
 }
 
-.captionText{
+.colaborador-text{
     font-size: 1em;
     margin: 0;
     color: #FFE7DA;
@@ -247,7 +241,7 @@ main figure img{
 
 /*desktop*/
 @media (min-width: 720px) {
-    main{
+    .conteudo{
         position: absolute;
         top: 0px;
         right: 0px;
@@ -258,46 +252,46 @@ main figure img{
         padding-top: 1em;
     }
 
-    main::-webkit-scrollbar {
+    .conteudo::-webkit-scrollbar {
         width: 16px;
     }
     
-    main::-webkit-scrollbar-track {
+    .conteudo::-webkit-scrollbar-track {
         background: transparent;
         z-index: 4;
     }
     
-    main::-webkit-scrollbar-thumb {
+    .conteudo::-webkit-scrollbar-thumb {
         background-color: #FF975C;
         border-radius: 10px;
         border: 3px solid #212226;
     }
 
-    main div{
+    .conteudo a{
+        text-decoration: none;
+    }
+    
+    .conteudo a:hover{
+        text-decoration: underline;
+    }
+
+    .conteudo-block{
         max-width: 720px;
         padding-left: 2em;
         padding-right: 2em;
     }
 
-    main div section h1{
+    .topico-title{
         font-size: 2.5em;
     }
 
-    main a{
-        text-decoration: none;
-    }
-    
-    main a:hover{
-        text-decoration: underline;
-    }
-
-    main figure{
+    .colaborador{
         width: 160px;
         height: 200px;
         padding: 0 0 20px 0;
     }
     
-    main figure img{
+    .colaborador img{
         max-width: 120px;
         box-sizing: border-box;
         border-radius: 50%;
@@ -308,7 +302,7 @@ main figure img{
 
 /*mobile*/
 @media (max-width: 720px) {
-    main{
+    .conteudo{
         position: relative;
         top: 0px;
         right: 0px;
@@ -317,28 +311,28 @@ main figure img{
         padding-top: .5em;
     }
 
-    main div{
+    .conteudo-block{
         max-width: 100%;
         padding-left: 1em;
         padding-right: 1em;
     }
 
-
-    main div section h1{
-        font-size: 1.5em;
-    }
-
-    main a{
+    .conteudo a{
         text-decoration: underline;
     }
 
-    main figure{
+    .topico-title{
+        font-size: 1.5em;
+    }
+
+
+    .colaborador{
         width: 100%;
         height: auto;
         margin: 20px;
     }
     
-    main figure img{
+    .colaborador img{
         max-width: 80%;
         box-sizing: border-box;
         border-radius: 50%;
@@ -346,18 +340,13 @@ main figure img{
     }
 }
 
-.image{
-    width: 100%;
-    padding: 0;
-}
-
 #diagram{
-    cursor:pointer;
+    cursor: pointer;
     max-width:100%;
     background-color: gainsboro;
 }
 
-footer{
+.rodape{
     margin-top: -50px;
     color: #FF975C;
     font-weight: bold;
@@ -369,16 +358,16 @@ footer{
     z-index: 5; 
 }
 
-footer div{
+.rodape-links{
     width: 210px;
 }
 
-footer img{
+.rodape-links img{
     height: 50px;
     box-sizing: border-box;
 }
 
-footer a{
+.rodape-links a{
     padding: 0 10px 0 10px;
 }
 
