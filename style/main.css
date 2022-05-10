@@ -315,6 +315,7 @@ body{
         max-width: 100%;
         padding-left: 1em;
         padding-right: 1em;
+        box-sizing: border-box;
     }
 
     .conteudo a{
@@ -340,9 +341,15 @@ body{
     }
 }
 
+.diagram{
+    width: 100%;
+    padding: 0;
+}
+
 #diagram{
     cursor: pointer;
     max-width:100%;
+    max-height:322px;
     background-color: gainsboro;
 }
 
