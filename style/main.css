@@ -384,3 +384,10 @@ body{
     border-radius: 50%;
 }
 
+.sigla-lista, .onibus-lista, .moradia-lista{
+    list-style-type: none;
+}
+
+h1 {
+    display: none;
+}
