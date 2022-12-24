@@ -227,6 +227,7 @@ li {
 
 .colaborador{
     justify-content: flex-start;
+    margin: 1em 40px;
 }
 
 .colaborador img{
