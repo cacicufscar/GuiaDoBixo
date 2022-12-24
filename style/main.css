@@ -77,7 +77,7 @@ body{
     font-weight: 900;
     color: #FF975C;
     font-size: 1.25em;
-    padding-top: 2em;
+    padding-top: 40px;
 }
 
 .topicos a{
@@ -186,15 +186,20 @@ body{
     color: #FF975C;
     margin: 0;
     text-align: left;
+    font-weight: bold;
 }
 
 .topico-subtitle{
     color: #F0769A;
     text-align: left;
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .topico-text{
     text-align: left;
+    margin: 1em 0;
 }
 
 .text-destaque{
@@ -205,6 +210,13 @@ body{
 .topico-ul{
     text-align: left;
     margin: 0;
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-block-start: 1em;
+}
+
+li {
+    margin: 2px 0;
 }
 
 #colaboradores{
@@ -346,14 +358,12 @@ body{
 .diagram{
     width: 100%;
     padding: 0;
-}
-
-#diagram{
     cursor: pointer;
     max-width:100%;
     max-height:322px;
     background-color: gainsboro;
 }
+
 
 .rodape{
     margin-top: -50px;
