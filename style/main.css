@@ -1,34 +1,31 @@
 /*fontes*/
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Lato:wght@400;700;900&display=swap');
 
-/*geral*/
+
+/*mobile*/
 body{
-    margin: 0;
-    padding: 0;
+    
     background-color: #212226;
     font-family: 'Lato', sans-serif;
     color: #FFE7DA;
     scroll-behavior: smooth;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    font-size: 1em;
 }
 
-/*desktop*/
-@media (min-width: 720px) {
-    body{
-        overflow: hidden;
-    }
+
+h1 {
+    display: none;
 }
 
-/*mobile*/
-@media (max-width: 720px) {
-    body{
-        overflow: scroll;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        text-align: center;
-        font-size: 1em;
-    }
+
+li {
+    margin: 2px 0;
 }
 
 .flex{
@@ -48,6 +45,7 @@ body{
 
 /*índice*/
 
+
 .indice{
     background-color: #4B1C55;
     overflow-y: scroll;
@@ -55,6 +53,14 @@ body{
     box-sizing: border-box;
     z-index: 6;
     justify-content: flex-start;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    width: 100%;
+    padding: 2em;
+    padding-bottom: 1em;
+    font-size: 1.5em;
 }
 
 .indice-logo{
@@ -62,6 +68,14 @@ body{
     position: relative;
     padding-top: .5em;
 }
+
+
+.indice-logo img{
+    max-width: 80%;
+    margin-bottom: -10%;
+    margin-top: -10%;
+}
+
 
 .topicos{
     width: 80%;
@@ -98,69 +112,8 @@ body{
     size: 60px;
     z-index: 5;
     box-shadow: rgba(0,0,0,.3) 3px 1.5px 1.5px;
+    position: fixed;
 }
-
-/*desktop*/
-@media (min-width: 720px) {
-    .indice{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-        width: 25%;
-        scrollbar-width: auto;
-        scrollbar-color: #FF975C #4B1C55;
-        padding: 1em;
-    }
-
-    .indice::-webkit-scrollbar {
-        width: 16px;
-    }
-    
-    .indice::-webkit-scrollbar-track {
-        background: #4B1C55;
-    }
-    
-    .indice::-webkit-scrollbar-thumb {
-        background-color: #FF975C;
-        border-radius: 10px;
-        border: 3px solid #4B1C55;
-    }
-
-    .indice-logo img{
-        max-width: 70%;
-    }
-
-    #goTopo{
-        position: hidden;
-    }
-}
-
-/*mobile*/
-@media (max-width: 720px) {
-    .indice{
-        position: relative;
-        top: 0px;
-        left: 0px;
-        height: auto;
-        width: 100%;
-        padding: 2em;
-        padding-bottom: 1em;
-        font-size: 1.5em;
-    }
-
-    .indice-logo img{
-        max-width: 80%;
-        margin-bottom: -10%;
-        margin-top: -10%;
-    }
-
-    #goTopo{
-        position: fixed;
-    }
-}
-
-
 
 /*main*/
 .conteudo{
@@ -187,6 +140,8 @@ body{
     margin: 0;
     text-align: left;
     font-weight: bold;
+    font-size: 1.5em;
+
 }
 
 .topico-subtitle{
@@ -195,6 +150,10 @@ body{
     margin: 20px 0;
     font-size: 1.5em;
     font-weight: bold;
+}
+
+h4.topico-subtitle{
+    font-size: 1.2em;
 }
 
 .topico-text{
@@ -215,9 +174,6 @@ body{
     margin-block-start: 1em;
 }
 
-li {
-    margin: 2px 0;
-}
 
 #colaboradores{
     margin: 0;
@@ -227,6 +183,8 @@ li {
 
 .colaborador{
     justify-content: flex-start;
+    width: 100%;
+    height: auto;
     margin: 1em 40px;
 }
 
@@ -234,6 +192,10 @@ li {
     max-width: 160px;
     box-sizing: border-box;
     border-radius: 80px;
+    padding: 10px;
+    max-width: 80%;
+    box-sizing: border-box;
+    border-radius: 50%;
     padding: 10px;
 }
 
@@ -251,110 +213,27 @@ li {
     text-align: center;
 }
 
-
-/*desktop*/
-@media (min-width: 720px) {
-    .conteudo{
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        height: 100%;
-        width: 75%;
-        scrollbar-width: auto;
-        scrollbar-color: #FF975C #212226;
-        padding-top: 1em;
-    }
-
-    .conteudo::-webkit-scrollbar {
-        width: 16px;
-    }
-    
-    .conteudo::-webkit-scrollbar-track {
-        background: transparent;
-        z-index: 4;
-    }
-    
-    .conteudo::-webkit-scrollbar-thumb {
-        background-color: #FF975C;
-        border-radius: 10px;
-        border: 3px solid #212226;
-    }
-
-    .conteudo a{
-        text-decoration: none;
-    }
-    
-    .conteudo a:hover{
-        text-decoration: underline;
-    }
-
-    .conteudo-block{
-        max-width: 720px;
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-
-    .topico-title{
-        font-size: 2.5em;
-    }
-
-    .colaborador{
-        width: 160px;
-        height: 200px;
-        padding: 0 0 20px 0;
-    }
-    
-    .colaborador img{
-        width: 120px;
-        height: 120px;
-        box-sizing: border-box;
-        border-radius: 50%;
-        padding: 10px;
-        object-fit: cover;
-    }
-
+.conteudo{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    height: auto;
+    width: 100%;
+    padding-top: .5em;
 }
 
-/*mobile*/
-@media (max-width: 720px) {
-    .conteudo{
-        position: relative;
-        top: 0px;
-        right: 0px;
-        height: auto;
-        width: 100%;
-        padding-top: .5em;
-    }
-
-    .conteudo-block{
-        max-width: 100%;
-        padding-left: 1em;
-        padding-right: 1em;
-        box-sizing: border-box;
-    }
-
-    .conteudo a{
-        text-decoration: underline;
-    }
-
-    .topico-title{
-        font-size: 1.5em;
-    }
-
-
-    .colaborador{
-        width: 100%;
-        height: auto;
-        margin: 20px;
-    }
-    
-    .colaborador img{
-        max-width: 80%;
-        box-sizing: border-box;
-        border-radius: 50%;
-        padding: 10px;
-    }
+.conteudo-block{
+    max-width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
+    box-sizing: border-box;
 }
+
+.conteudo a{
+    text-decoration: underline;
+}
+
+
 
 .diagram{
     width: 100%;
@@ -397,10 +276,112 @@ li {
     border-radius: 50%;
 }
 
+
 .sigla-lista, .onibus-lista, .moradia-lista{
     list-style-type: none;
 }
 
-h1 {
-    display: none;
+
+/*desktop*/
+@media (min-width: 720px) {
+
+    body{
+        overflow: hidden;
+    }
+
+    .indice{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 25%;
+        scrollbar-width: auto;
+        scrollbar-color: #FF975C #4B1C55;
+        padding: 1em;
+        font-size: 1em;
+    }
+
+    .indice::-webkit-scrollbar {
+        width: 16px;
+    }
+    
+    .indice::-webkit-scrollbar-track {
+        background: #4B1C55;
+    }
+    
+    .indice::-webkit-scrollbar-thumb {
+        background-color: #FF975C;
+        border-radius: 10px;
+        border: 3px solid #4B1C55;
+    }
+
+    
+    .conteudo{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 75%;
+        scrollbar-width: auto;
+        scrollbar-color: #FF975C #212226;
+        padding-top: 1em;
+    }
+    
+    .conteudo::-webkit-scrollbar {
+        width: 16px;
+    }
+    
+    .conteudo::-webkit-scrollbar-track {
+        background: transparent;
+        z-index: 4;
+    }
+    
+    .conteudo::-webkit-scrollbar-thumb {
+        background-color: #FF975C;
+        border-radius: 10px;
+        border: 3px solid #212226;
+    }
+
+    .conteudo a{
+        text-decoration: none;
+    }
+    
+    .conteudo a:hover{
+        text-decoration: underline;
+    }
+    
+    .conteudo-block{
+        max-width: 720px;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    
+    .topico-title{
+        font-size: 2.5em;
+    }
+
+    .colaborador{
+        width: 160px;
+        height: 200px;
+        padding: 0 0 20px 0;
+    }
+    
+    .colaborador img{
+        width: 120px;
+        height: 120px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        padding: 10px;
+        object-fit: cover;
+    }
+
+    
+    .indice-logo img{
+        max-width: 70%;
+    }
+
+    #goTopo{
+        display: none;
+    }
 }
+
