@@ -1,179 +1,141 @@
 /*fontes*/
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Inline&family=Lato:wght@400;700;900&display=swap');
 
-/*geral*/
+
+/*mobile*/
 body{
-    margin: 0;
-    padding: 0;
+    
     background-color: #212226;
     font-family: 'Lato', sans-serif;
     color: #FFE7DA;
     scroll-behavior: smooth;
-}
-
-/*desktop*/
-@media (min-width: 720px) {
-    body{
-        overflow: hidden;
-    }
-}
-
-/*mobile*/
-@media (max-width: 720px) {
-    body{
-        overflow: scroll;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        text-align: center;
-        font-size: 1em;
-    }
-}
-
-.flex{
+    overflow: scroll;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.column{
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.2;
 }
 
-.row{
-    flex-direction: row;
-} 
+
+h1 {
+    display: none;
+}
+
+li {
+    margin-top: 4px;
+}
+
+
+.estrutura{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 /*índice*/
-
 .indice{
     background-color: #4B1C55;
     overflow-y: scroll;
     overflow-x: hidden;
     box-sizing: border-box;
     z-index: 6;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    height: auto;
+    width: 100%;
+    padding: 2em;
+    padding-bottom: 1em;
+    font-size: 1.5em;
+    
+    
+    display: flex;
     justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
-.indice-logo{
+
+
+.indice__logo{
     display: block;
     position: relative;
     padding-top: .5em;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
-.topicos{
+
+.indice__logo img{
+    max-width: 80%;
+}
+
+
+.indice__topicos{
     width: 80%;
     text-align: left;
     font-weight: 700;
     font-size: 1em;
 }
 
-.topicos-titulo{
-    margin-top: .25em;
-    margin-bottom: .25em;
-    color: #FFE7DA;
-    font-weight: 900;
-    color: #FF975C;
-    font-size: 1.25em;
-    padding-top: 2em;
-}
-
-.topicos a{
+.indice__topicos a{
     text-decoration: none;
     color: #FFE7DA;
 }
 
-.topicos a:hover{
+.indice__topicos a:hover{
     text-decoration: underline;
 }
 
-#goTopo{
-    display: block;
-    background-color: #4B1C55;
-    border-radius: 30px;
-    right: 16px;
-    bottom: 16px;
-    size: 60px;
-    z-index: 5;
-    box-shadow: rgba(0,0,0,.3) 3px 1.5px 1.5px;
+.indice__titulo{
+    margin: .25em 0;
+    font-weight: 900;
+    color: #FF975C;
+    font-size: 1.25em;
+    padding-top: 1em;
 }
 
-/*desktop*/
-@media (min-width: 720px) {
-    .indice{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-        width: 25%;
-        scrollbar-width: auto;
-        scrollbar-color: #FF975C #4B1C55;
-        padding: 1em;
-    }
-
-    .indice::-webkit-scrollbar {
-        width: 16px;
-    }
-    
-    .indice::-webkit-scrollbar-track {
-        background: #4B1C55;
-    }
-    
-    .indice::-webkit-scrollbar-thumb {
-        background-color: #FF975C;
-        border-radius: 10px;
-        border: 3px solid #4B1C55;
-    }
-
-    .indice-logo img{
-        max-width: 70%;
-    }
-
-    #goTopo{
-        position: hidden;
-    }
+.indice__text{
+    text-align: left;
+    margin-top: .5em;
 }
 
-/*mobile*/
-@media (max-width: 720px) {
-    .indice{
-        position: relative;
-        top: 0px;
-        left: 0px;
-        height: auto;
-        width: 100%;
-        padding: 2em;
-        padding-bottom: 1em;
-        font-size: 1.5em;
-    }
-
-    .indice-logo img{
-        max-width: 80%;
-        margin-bottom: -10%;
-        margin-top: -10%;
-    }
-
-    #goTopo{
-        position: fixed;
-    }
-}
-
-
-
-/*main*/
-.conteudo{
-    background-color: #212226;
+.conteudo-block{
+    max-width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
     box-sizing: border-box;
     scroll-behavior: smooth;
     overflow-y: scroll;
     overflow-x: hidden;
-    justify-content: flex-start;
 }
 
-.conteudo a{
+/*main*/
+.main{
+    background-color: #212226;
+    box-sizing: border-box;
+    
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+.main a{
     color: #F0769A;
+    text-decoration: underline;
 }
 
 .topico{
@@ -182,19 +144,30 @@ body{
     
 }
 
-.topico-title{
+.topico__title{
     color: #FF975C;
     margin: 0;
     text-align: left;
+    font-weight: bold;
+    font-size: 1.5em;
+
 }
 
-.topico-subtitle{
+.topico__subtitle{
     color: #F0769A;
     text-align: left;
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.topico-text{
+h4.topico__subtitle{
+    font-size: 1.2em;
+}
+
+.topico__text{
     text-align: left;
+    margin: 1em 0;
 }
 
 .text-destaque{
@@ -202,19 +175,40 @@ body{
     color: #F0769A;
 }
 
-.topico-ul{
+.topico__ul{
     text-align: left;
     margin: 0;
+    list-style-type: disc;
+    padding-left: 40px;
+    margin-block-start: 1em;
 }
+
 
 #colaboradores{
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    flex-direction: row;
 }
 
 .colaborador{
+    width: 100%;
+    height: auto;
+    margin: 1em 40px;
+    
+    
+    display: flex;
     justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .colaborador img{
@@ -222,6 +216,11 @@ body{
     box-sizing: border-box;
     border-radius: 80px;
     padding: 10px;
+    max-width: 80%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding: 10px;
+    object-fit: cover;
 }
 
 .colaborador-title{
@@ -239,119 +238,15 @@ body{
 }
 
 
-/*desktop*/
-@media (min-width: 720px) {
-    .conteudo{
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        height: 100%;
-        width: 75%;
-        scrollbar-width: auto;
-        scrollbar-color: #FF975C #212226;
-        padding-top: 1em;
-    }
-
-    .conteudo::-webkit-scrollbar {
-        width: 16px;
-    }
-    
-    .conteudo::-webkit-scrollbar-track {
-        background: transparent;
-        z-index: 4;
-    }
-    
-    .conteudo::-webkit-scrollbar-thumb {
-        background-color: #FF975C;
-        border-radius: 10px;
-        border: 3px solid #212226;
-    }
-
-    .conteudo a{
-        text-decoration: none;
-    }
-    
-    .conteudo a:hover{
-        text-decoration: underline;
-    }
-
-    .conteudo-block{
-        max-width: 720px;
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-
-    .topico-title{
-        font-size: 2.5em;
-    }
-
-    .colaborador{
-        width: 160px;
-        height: 200px;
-        padding: 0 0 20px 0;
-    }
-    
-    .colaborador img{
-        max-width: 120px;
-        box-sizing: border-box;
-        border-radius: 50%;
-        padding: 10px;
-    }
-
-}
-
-/*mobile*/
-@media (max-width: 720px) {
-    .conteudo{
-        position: relative;
-        top: 0px;
-        right: 0px;
-        height: auto;
-        width: 100%;
-        padding-top: .5em;
-    }
-
-    .conteudo-block{
-        max-width: 100%;
-        padding-left: 1em;
-        padding-right: 1em;
-        box-sizing: border-box;
-    }
-
-    .conteudo a{
-        text-decoration: underline;
-    }
-
-    .topico-title{
-        font-size: 1.5em;
-    }
-
-
-    .colaborador{
-        width: 100%;
-        height: auto;
-        margin: 20px;
-    }
-    
-    .colaborador img{
-        max-width: 80%;
-        box-sizing: border-box;
-        border-radius: 50%;
-        padding: 10px;
-    }
-}
-
 .diagram{
     width: 100%;
     padding: 0;
-}
-
-#diagram{
     cursor: pointer;
     max-width:100%;
     max-height:322px;
     background-color: gainsboro;
 }
+
 
 .rodape{
     margin-top: -50px;
@@ -363,10 +258,24 @@ body{
     box-sizing: border-box;
     padding: 20px;
     z-index: 5; 
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
 }
 
 .rodape-links{
     width: 210px;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
 }
 
 .rodape-links img{
@@ -382,5 +291,131 @@ body{
     padding: 3px;
     background-color: white;
     border-radius: 50%;
+}
+
+
+.sigla-lista, .onibus-lista, .moradia-lista{
+    list-style-type: none;
+}
+
+
+#goTopo{
+    display: block;
+    background-color: #4B1C55;
+    border-radius: 30px;
+    right: 16px;
+    bottom: 16px;
+    size: 60px;
+    z-index: 5;
+    box-shadow: rgba(0,0,0,.3) 3px 1.5px 1.5px;
+    position: fixed;
+}
+
+
+/*desktop*/
+@media (min-width: 720px) {
+
+    body{
+        overflow: hidden;
+    }
+
+    .estrutura{
+        flex-direction: row;
+        gap: 0;
+        overflow: auto;
+        height: 100%;
+        position: absolute;
+    }
+
+    .indice{
+        scrollbar-width: auto;
+        scrollbar-color: #FF975C #4B1C55;
+        padding: 1em;
+        font-size: 1em;
+        min-height: min-content;
+        overflow-y: scroll;
+
+        width: 25%;
+    }
+
+    .indice__logo img{
+        max-width: 70%;
+    }
+    
+
+    .indice::-webkit-scrollbar {
+        width: 16px;
+    }
+    
+    .indice::-webkit-scrollbar-track {
+        background: #4B1C55;
+    }
+    
+    .indice::-webkit-scrollbar-thumb {
+        background-color: #FF975C;
+        border-radius: 10px;
+        border: 3px solid #4B1C55;
+    }
+
+    
+    .conteudo-block{
+        scrollbar-width: auto;
+        scrollbar-color: #FF975C #212226;
+        padding-top: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        flex-grow: 3;
+        min-height: min-content;
+        overflow-y: visible;
+
+        width: 25%  ;
+    }
+    
+    .conteudo-block::-webkit-scrollbar {
+        width: 16px;
+    }
+    
+    .conteudo-block::-webkit-scrollbar-track {
+        background: transparent;
+        z-index: 4;
+    }
+    
+    .conteudo-block::-webkit-scrollbar-thumb {
+        background-color: #FF975C;
+        border-radius: 10px;
+        border: 3px solid #212226;
+    }
+
+
+    .main a{
+        text-decoration: none;
+    }
+    
+    .main a:hover{
+        text-decoration: underline;
+    }
+    
+    .topico__title{
+        font-size: 2.5em;
+    }
+
+    .colaborador{
+        width: 160px;
+        height: 200px;
+        padding: 0 0 20px 0;
+    }
+    
+    .colaborador img{
+        width: 120px;
+        height: 120px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        padding: 10px;
+        object-fit: cover;
+    }
+
+    #goTopo{
+        display: none;
+    }
 }
 
