@@ -8,6 +8,7 @@
   <link rel="sortcut icon" href="imagens/logo.png" type="image/x-icon"/>
   <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/toggleswitch.css">
 
 </head>
 <body>
@@ -298,10 +299,18 @@
         <section class="topico" id="cursos">
         <h2 class="topico__title">Cursos BCC e EnC</h2>
         <h3 class="topico__subtitle">Ciência da Computação</h3>
-        <p class="topico__text">O curso de Ciência da Computação visa desenvolver uma base sólida para que o graduando esteja preparado para se aprofundar em qualquer área da computação, tanto para carreira acadêmica quanto para o mercado de trabalho.<br><br>Até o 4 semestre as matérias obrigatórias de matemática, software e hardware visam construir uma base sobre os conceitos primordiais à computação, para que então, a partir do 5º semestre, o graduando escolha entre 9 matérias de trilhas das 10 trilhas oferecidas, e possa se aprofundar e se especializar nas áreas de interesse.<br><br>As trilhas são: Engenharia de Software, Aprendizado de Máquina, Banco de Dados, Processamento Digital de Imagens e Visão Computacional, Arquitetura de Computadores,Tratamento e Visualização de Dados, Sistema Embarcados, Programação de Alto Desempenho, Programação Avançada e Desenvolvimento Web e Móvel.</p>
+        <p class="topico__text">O curso de Ciência da Computação visa desenvolver uma base sólida para que o graduando esteja preparado para se aprofundar em qualquer área da computação, tanto para carreira acadêmica quanto para o mercado de trabalho.<br><br>Até o 4 semestre as matérias obrigatórias de matemática, software e hardware visam construir uma base sobre os conceitos primordiais à computação, para que então, a partir do 5º semestre, o graduando escolha entre 9 matérias de trilhas das 10 trilhas oferecidas, e possa se aprofundar e se especializar nas áreas de interesse.<br><br>As trilhas são: Engenharia de Software, Aprendizado de Máquina, Banco de Dados, Processamento Digital de Imagens e Visão Computacional, Arquitetura de Computadores,Tratamento e Visualização de Dados, Sistema Embarcados, Programação de Alto Desempenho, Programação Avançada e Desenvolvimento Web e Móvel.<br><br>Clique no switch para mostrar a grade do seu curso!</p>
 
-        <!-- digrama do curso -->
-        <a href="imagens/gradeBCC.svg" target="_blank"><img class="diagram" src="imagens/gradeBCC.svg" alt="Diagrama das disciplinas do BCC"></a>
+        
+        <!-- Rounded switch -->
+        <input type="checkbox" id="botao" name="botao">
+        <label class="switch" for="botao"></label>
+        <span class="slider round"></span>
+        
+        <!-- digrama dos cursos -->
+        <a href="imagens/gradeBCC.svg" target="_blank"><img class="diagram dbcc" src="imagens/gradeBCC.svg" alt="Diagrama das disciplinas do BCC"></a>
+
+        <a href="imagens/GradeENC.pdf" target="_blank"><img class="diagram denc" src="imagens/GradeENC.jpg" alt="Diagrama das disciplinas do ENC"></a>
 
         <p class="topico__text">Para saber mais, acesse o <a href="https://www.prograd.ufscar.br/cursos/cursos-oferecidos-1/ciencia-da-computacao/PPCBCC_2019.pdf" target ="_blank">Projeto Pedagógico</a> </p>
 
