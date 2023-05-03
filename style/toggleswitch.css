@@ -50,10 +50,10 @@ transform: translateX(26px);
 }
 
 
-input:not(:checked) ~ a .diagram.dbcc {
+input:checked ~ a .diagram.dbcc {
     display: none;
 }
 
-input:checked ~ a .diagram.denc {
+input:not(:checked) ~ a .diagram.denc {
     display: none;
 }
